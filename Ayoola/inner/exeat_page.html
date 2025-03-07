@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="application.css">
+</head>
+<body>
+  <div class="top-s">Hello</div>
+  <nav>
+      <div class="Logo"><img src="./z-images/MTU.webp" width="93px" height="64px">
+          <p>MOUNTAIN TOP<BR> UNIVERSITY</p>
+      </div>
+  </nav>
+
+  <div class="container">
+    <h1>Exeat Application Form</h1>
+        
+        <!-- Interactive Exeat Form -->
+    <form>
+      <input type="text" placeholder="Matric Number" required />
+      <input type="email" placeholder="Parent or Guardian's Email Address" required />
+      <textarea placeholder="State your reason for the exeat request" rows="4" required></textarea>
+      <input type="submit" value="Submit Request" />
+    </form>
+  </div>
+
+    <footer>
+      &copy; MTU 2025. All rights reserved.
+    </footer>
+
+</body>
+        <!-- Optional JavaScript for additional interactivity -->
+      <script>
+        // You could add dynamic behaviors here – for instance, submit animations or form validation.
+        const form = document.querySelector("form");
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Your exeat request has been submitted!");
+          form.reset();
+        });
+      </script>
+</html>

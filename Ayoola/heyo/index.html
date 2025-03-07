@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>University Exeat Portal</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #84b000, #6a11cb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    .container {
+      background: #fff;
+      max-width: 600px;
+      width: 90%;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    h1 {
+      text-align: center;
+      color: #6a11cb;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    
+    /* Form Styles */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #84b000;
+      box-shadow: 0 0 8px rgba(132, 176, 0, 0.3);
+    }
+    
+    input[type="submit"] {
+      background: #84b000;
+      border: none;
+      color: #fff;
+      padding: 0.9rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    input[type="submit"]:hover {
+      background: #6a11cb;
+    }
+    
+    /* Image Section styles */
+    .image-section {
+      margin-top: 2rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    
+    .image-section img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s ease, filter 0.5s ease;
+      filter: brightness(0.97);
+    }
+    
+    .image-section img:hover {
+      transform: scale(1.03);
+      filter: brightness(1);
+    }
+    
+    /* Footer styles */
+    footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: #555;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Exeat Request Portal</h1>
+    
+    <!-- Interactive Exeat Form -->
+    <form>
+      <input type="text" placeholder="Enter your Student ID" required />
+      <input type="email" placeholder="Enter your Email" required />
+      <textarea placeholder="State your reason for the request" rows="4" required></textarea>
+      <input type="submit" value="Submit Request" />
+    </form>
+    
+    <!-- Replacing the black image with our vibrant campus picture. -->
+    <div class="image-section">
+      <!-- Replace 'campus-image.jpg' with a relevant image URL -->
+      <img src="campus-image.jpg" alt="A vibrant campus scene" />
+    </div>
+    
+    <footer>
+      &copy; 2023 Your University Name. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- Optional JavaScript for additional interactivity -->
+  <script>
+    // You could add dynamic behaviors here – for instance, submit animations or form validation.
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Your exeat request has been submitted!");
+      form.reset();
+    });
+  </script>
+</body>
+</html>
